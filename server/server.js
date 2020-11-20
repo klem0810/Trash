@@ -42,7 +42,7 @@ wss.on("connection", function connection(ws) {
     // Send message to fusion
     // NB: TLS server code needs to 
     // be modified to run without header
-    tlsClient.write(`StartMsg|${mess.method}|${mess.id}|${mess.payload}|EndMsg|`);
+    tlsClient.write(`StartMsg|${mess.cmdId}|${mess.msgId}|${mess.payload}|EndMsg|`);
   });
 
   // Process message from fusion and send it to angular

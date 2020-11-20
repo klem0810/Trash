@@ -22,8 +22,8 @@ export class AppComponent {
    */
   sendMessage() {
     this.dataService.sendMessage({
-      method: 'GetStatus',
-      id:'all',
+      cmdId: 'GetStatus',
+      msgId:'all',
       payload:''
     });
   }

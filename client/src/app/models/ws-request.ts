@@ -1,6 +1,6 @@
 export interface WSRequest {
   message?: string;
-  method: string;
-  id: string;
+  cmdId: string;
+  msgId: string;
   payload: string;
 }
