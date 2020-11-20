@@ -1,3 +1,15 @@
-<button (click)="sendMessage()" mat-flat-button color="primary">Send message</button>
-<br>
-{{ message$ | async }}
+<div fxLayout  class="main-container">
+  <div
+  fxFlex="30%"
+    fxLayout="column wrap"
+    fxLayoutGap="10px"
+    fxLayoutAlign="flex-start flex-start"
+  >
+    <ng-container *ngFor="let cmd of data.cmds; let index = index;">
+      <button (click)="sendMessage(cmd, data.payload[index])" mat-flat-button color="primary">
+        {{ cmd }}
+      </button></ng-container
+    >
+  </div>
+  <div>{{ message$ | async }}</div>
+</div>

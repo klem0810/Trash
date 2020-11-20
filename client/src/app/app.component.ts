@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Data } from './data';
 import { DataService } from './services/data.service';
 
 @Component({
@@ -11,20 +12,26 @@ export class AppComponent {
    * @description Received messages
    */
   message$ = this.dataService.message$;
+  /**
+   * @description Data to be sent
+   */
+  data: Data;
 
   /**
    * Constructor
    */
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+    this.data = new Data();
+  }
 
   /**
    * Send messages
    */
-  sendMessage() {
+  sendMessage(cmdId: string, payload: object) {
     this.dataService.sendMessage({
-      cmdId: 'GetStatus',
-      msgId:'all',
-      payload:''
+      cmdId: cmdId,
+      msgId: 'all',
+      payload: payload,
     });
   }
 }
