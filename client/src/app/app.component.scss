@@ -1,7 +1,7 @@
 .main-container {
   height: 100vh;
-
-  button {
-    width: 250px;
+  mat-selection-list {
+    flex-grow: 1;
+    overflow: auto;
   }
 }
