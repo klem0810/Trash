@@ -27,11 +27,11 @@ export class AppComponent {
   /**
    * Send messages
    */
-  sendMessage(cmdId: string, payload: object) {
+  sendMessage(cmdId: string, payload: unknown) {
     this.dataService.sendMessage({
-      cmdId: cmdId,
+      cmdId,
       msgId: 'all',
-      payload: payload,
+      payload,
     });
   }
 }

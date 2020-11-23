@@ -8,7 +8,6 @@
             "type": "chrome",
             "request": "launch",
             "name": "Chrome",
-            "runtimeExecutable": "/snap/bin/chromium",
             "url": "http://localhost:4200",
             "webRoot": "${workspaceFolder}"
         }
